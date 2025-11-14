@@ -63,7 +63,6 @@ function createTaskFromStarred() {
   if (!todoistToken) throw new Error("Todoist API token not found. Run setTodoistToken() first.");
 
   const threads = GmailApp.search('is:starred');
-  const apiUrl = 'https://api.todoist.com/rest/v2/tasks';
 
   threads.forEach(thread => {
     const messages = thread.getMessages();
