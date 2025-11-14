@@ -1,5 +1,10 @@
 # Gmail Stars to Todoist
 
+[![CI](https://github.com/stackedsax/gmail-stars-to-todoist/workflows/CI/badge.svg)](https://github.com/stackedsax/gmail-stars-to-todoist/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/stackedsax/gmail-stars-to-todoist/workflows/CodeQL/badge.svg)](https://github.com/stackedsax/gmail-stars-to-todoist/actions/workflows/codeql.yml)
+[![Security Audit](https://github.com/stackedsax/gmail-stars-to-todoist/workflows/Security%20Audit/badge.svg)](https://github.com/stackedsax/gmail-stars-to-todoist/actions/workflows/dependency-audit.yml)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 A Google Apps Script that automatically creates Todoist tasks from starred Gmail messages.
 
 ## Features
