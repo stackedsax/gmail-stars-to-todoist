@@ -1,0 +1,37 @@
+{
+  "name": "gmail-stars-to-todoist",
+  "version": "1.0.0",
+  "description": "A Google Apps Script that automatically creates Todoist tasks from starred Gmail messages",
+  "main": "Code.js",
+  "scripts": {
+    "push": "npx clasp push",
+    "deploy": "npx clasp deploy",
+    "open": "npx clasp open",
+    "setup": "npx clasp create --title 'Gmail Stars to Todoist' --type standalone && npx clasp push"
+  },
+  "keywords": [
+    "gmail",
+    "todoist",
+    "google-apps-script",
+    "automation",
+    "productivity",
+    "email",
+    "task-management"
+  ],
+  "author": "Contributors",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/username/gmail-stars-to-todoist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/username/gmail-stars-to-todoist/issues"
+  },
+  "homepage": "https://github.com/username/gmail-stars-to-todoist#readme",
+  "engines": {
+    "node": ">=4.7.4"
+  },
+  "dependencies": {
+    "@google/clasp": "^3.1.1"
+  }
+}
