@@ -17,19 +17,25 @@ A Google Apps Script that automatically creates Todoist tasks from starred Gmail
 
 ## Setup Instructions
 
-### 1. Install Dependencies
+### 1. Clone This Repository
+
+```bash
+git clone https://github.com/stackedsax/gmail-stars-to-todoist.git
+cd gmail-stars-to-todoist
+```
+
+### 2. Install Dependencies
 
 ```bash
 npm install
-npm install @google/clasp
 ```
 
-### 2. Enable Google Apps Script API
+### 3. Enable Google Apps Script API
 
 1. Go to https://script.google.com/home/usersettings
 2. Turn on the "Google Apps Script API" toggle
 
-### 3. Create and Deploy Your Script
+### 4. Create and Deploy Your Script
 
 ```bash
 # Login to Google Apps Script
@@ -42,38 +48,46 @@ npx clasp create --title "Gmail Stars to Todoist" --type standalone
 npx clasp push
 
 # Open in browser to configure
-npx clasp open
+npx clasp open-script
 ```
 
-### 4. Configure in Google Apps Script Editor
+### 5. Configure in Google Apps Script Editor
 
-After running `npx clasp open`, complete these steps in the web interface:
+After running `npx clasp open-script`, complete these steps in the web interface:
 
 #### Set Todoist API Token
 1. Go to [Todoist Integrations](https://todoist.com/prefs/integrations) 
 2. Copy your API token
-3. In Apps Script, go to Project Settings → Script Properties
-4. Add property: `TODOIST_API_TOKEN` with your token value
+3. In Apps Script, go to Project Settings or run `npx clasp open-api-console`
+4. Scroll down to Script Properties
+5. Add property: `TODOIST_API_TOKEN` with your token value
 
 #### Set Up Gmail Permissions
 1. Run the `createTaskFromStarred` function once manually
 2. Grant required Gmail permissions when prompted
 
 #### Create Trigger (Optional)
-For automatic processing:
+For automatic processing, choose one option:
+
+**Option A: Via Command Line**
+```bash
+npx clasp run createTrigger
+```
+
+**Option B: Manual Setup**
 1. Go to Triggers in the left sidebar
 2. Click "Add Trigger"
 3. Choose `createTaskFromStarred` function
 4. Select "Time-driven" trigger type
-5. Choose frequency (e.g., every 5 minutes, hourly)
+5. Choose frequency (e.g., every minute, every 5 minutes, hourly)
 
-### 5. Local Development
+### 6. Local Development
 
 After setup, you can:
 - Edit code locally in `Code.js`
 - Push changes: `npx clasp push`
 - Deploy updates: `npx clasp deploy`
-- View in browser: `npx clasp open`
+- View in browser: `npx clasp open-script`
 
 ## Usage
 
