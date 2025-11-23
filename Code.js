@@ -96,3 +96,11 @@ function createTaskFromStarred() {
     });
   });
 }
+
+function createTrigger() {
+  ScriptApp.newTrigger('createTaskFromStarred')
+    .timeBased()
+    .everyMinutes(1)
+    .create();
+  console.log('Trigger created successfully - will run every minute');
+}
