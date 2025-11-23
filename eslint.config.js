@@ -11,6 +11,7 @@ module.exports = [
         PropertiesService: "readonly",
         GmailApp: "readonly",
         UrlFetchApp: "readonly",
+        ScriptApp: "readonly",
         console: "readonly",
         
         // Test globals (for future tests)
@@ -23,7 +24,7 @@ module.exports = [
     },
     rules: {
       "no-unused-vars": ["warn", { 
-        "varsIgnorePattern": "^(createTaskFromStarred|walkHtmlAndExtract)$"
+        "varsIgnorePattern": "^(createTaskFromStarred|walkHtmlAndExtract|createTrigger)$"
       }],
       "no-undef": "error",
       "prefer-const": "warn",
